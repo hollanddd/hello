@@ -1,0 +1,13 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - echo Entered the build phase...
+      - make
+  post_build:
+    commands:
+      - echo Done `date`
+artifacts:
+  files:
+    - hello.cpp
+  name: myname-$(date +%Y-%m-%d)
